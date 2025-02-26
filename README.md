@@ -29,7 +29,7 @@
 
 Based on the above requirements, the following is the proposed solution
 
-#### <ins> Hashicorp Vault for secrets + Hashicorp Consul for configuration Management </ins>
+#### <ins> Hashicorp Vault for secrets + AWS Parameter Store for configuration Management </ins>
 
 ##### <ins> Architecture: </ins>
 
@@ -102,7 +102,7 @@ New Pods Pick Up Updated Configurations:
 
 The restarted pods will use the new values from the updated ConfigMap or Secret.  
 
-### Application configuration management using AWS parameter Store 
+### Workload configuration management using AWS parameter Store 
 
 In this solution, AWS parameter store is used as a centralized management layer for managing app configurations. Objects stored in AWS parameter store are version controlled, Audit Trail enabled, Rollback supported. Furthermore, Users can use the AWS console which gives them an intuitive UI to update the App configurations like endpoints, timeouts etc 
 
@@ -118,7 +118,7 @@ Architecture:
 - Config Reloading created in the above block will dynamically replace the configuration based on a new version 
 
 
-### <ins> Problem Statement that the above solution is solving </ins> 
+### <ins> Problem Statements that the above solution is solving </ins> 
 
 ✅  Centralized Management of Secrets - Using Vault
 
