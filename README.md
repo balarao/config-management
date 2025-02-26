@@ -11,9 +11,9 @@
 - [Problem statement to Solution Matrix](#NeglectedSolutions) 
 
 
-# Context: 
+# <ins> Context: </ins>
 
-### Designing a centralized configuration management solution that tackles the following issues 
+### <ins> Designing a centralized configuration management solution that tackles the following issues </ins>
 
 - Centralized configuration management
 - Scales out on demand
@@ -25,13 +25,13 @@
 - RBAC
 
 
-### Solutions Considered
+### <ins> Solutions Considered </ins>
 
 Based on the above requirements, the following is the proposed solution
 
-#### Hashicorp Vault for secrets + Hashicorp Consul for configuration Management
+#### <ins> Hashicorp Vault for secrets + Hashicorp Consul for configuration Management </ins>
 
-#####  Architecture:
+##### <ins> Architecture: </ins>
 
 ![Client Auth Flow](Client-auth-flow.png)
 
@@ -44,7 +44,7 @@ Client Authentication Flow:
 3. User logs in clicking the Google-OIDC and uses their creds to authenticate
 4. Once the user is authenticated and the OIDC provider returns success, vault server returns their policy and routes their request to the vault console
 
-##### New tenant Creation: 
+##### <ins> New tenant Creation: </ins>
 
 A tenant is a new or existing application/workload that is getting onboarded or already deployed on to the environment.
 
@@ -118,7 +118,7 @@ Architecture:
 - Config Reloading created in the above block will dynamically replace the configuration based on a new version 
 
 
-### Solution Matrix 
+### <ins> Problem Statement that the above solution is solving </ins> 
 
 ✅  Centralized Management of Secrets - Using Vault
 
@@ -138,7 +138,7 @@ integrations
 ✅  Scalability & Resilience to accomodate for frequent changes - Native feature
 
 
-## Other solutions considered but neglected: 
+## <ins> Other solutions considered but neglected: </ins>
 
 
 
